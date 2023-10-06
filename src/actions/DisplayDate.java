@@ -7,7 +7,7 @@ public class DisplayDate implements AppStateInterface {
     @Override
     public void display() {
         System.out.println("The current date is: " + ChangeDate.currentDate);
-        System.out.println("Enter 'c' to change date or enter 'd' to display time");
+        System.out.println("Enter 'c' to change date or enter 'd' to display the time instead");
     }
 
     @Override

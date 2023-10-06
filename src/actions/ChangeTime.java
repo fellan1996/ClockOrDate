@@ -7,16 +7,19 @@ import states.AppStateInterface;
 public class ChangeTime implements AppStateInterface {
     static String currentTime = "00:00";
 
-
     @Override
     public void display() {
-        System.out.println("Set a new time in the format 'hh:mm'");
+        System.out.println("Set a new time in the format 'HH:MM'");
     }
-
 
     @Override
     public AppStateEnum getNextState(String userInput) {
-        currentTime = userInput;
+        String timePattern = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
+        if (userInput.matches(timePattern)) {
+            currentTime = userInput;
+        } else {
+            System.out.println("Invalid time format. Use 'HH:MM' format next time.");
+        }
         return AppStateEnum.DISPLAY_TIME;
     }
 
