@@ -8,9 +8,13 @@ import java.util.Scanner;
 
 public class App {
     private AppStateEnum currentState;
+    private final DisplayTime displayTime = new DisplayTime();
+    private final ChangeTime changeTime = new ChangeTime();
+    private final DisplayDate displayDate = new DisplayDate();
+    private final ChangeDate changeDate = new ChangeDate();
 
-    public App() {
-        currentState = AppStateEnum.DISPLAY_TIME;
+    public App(AppStateEnum currentState) {
+        this.currentState = currentState;
     }
 
     public void run() {
@@ -18,34 +22,28 @@ public class App {
         String userInput;
         while (true) {
             switch (currentState) {
-                case DISPLAY_TIME:
-                    DisplayTime displayTime = new DisplayTime();
+                case DISPLAY_TIME -> {
                     displayTime.display();
                     userInput = scanner.nextLine().trim();
                     System.out.println(userInput + " userInput");
                     currentState = displayTime.getNextState(userInput);
-                    break;
-                case CHANGE_TIME:
-                    ChangeTime changeTime = new ChangeTime();
+                }
+                case CHANGE_TIME -> {
                     changeTime.display();
                     userInput = scanner.nextLine().trim();
                     currentState = changeTime.getNextState(userInput);
-                    break;
-                case DISPLAY_DATE:
-                    DisplayDate displayDate = new DisplayDate();
+                }
+                case DISPLAY_DATE -> {
                     displayDate.display();
                     userInput = scanner.nextLine().trim();
                     currentState = displayDate.getNextState(userInput);
-                    break;
-                case CHANGE_DATE:
-                    ChangeDate changeDate = new ChangeDate();
+                }
+                case CHANGE_DATE -> {
                     changeDate.display();
                     userInput = scanner.nextLine().trim();
                     currentState = changeDate.getNextState(userInput);
-                    break;
-                default:
-                    System.out.println("Invalid state");
-                    break;
+                }
+                default -> System.out.println("Invalid state");
             }
 
             if (currentState == null) {
@@ -58,7 +56,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        App app = new App();
+        App app = new App(AppStateEnum.DISPLAY_TIME);
         app.run();
     }
 }
