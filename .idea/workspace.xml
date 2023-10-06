@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffdd454e-c207-4c3b-8072-3aff9aa72f91" name="Changes" comment="changed location of where instances are created">
+    <list default="true" id="ffdd454e-c207-4c3b-8072-3aff9aa72f91" name="Changes" comment="Made sure that only the correct time and date formats are allowed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/ChangeDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ChangeDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/ChangeTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ChangeTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/DisplayDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DisplayDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/DisplayTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/DisplayTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +69,20 @@
       <option name="project" value="LOCAL" />
       <updated>1696594148600</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made sure that only the correct time and date formats are allowed">
+      <created>1696597166203</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696597166203</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="changed location of where instances are created" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed location of where instances are created" />
+    <MESSAGE value="Made sure that only the correct time and date formats are allowed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made sure that only the correct time and date formats are allowed" />
   </component>
 </project>

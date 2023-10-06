@@ -5,7 +5,6 @@ public class DisplayTime implements AppStateInterface {
 
     @Override
     public void display() {
-        System.out.println("");
         System.out.println("The current time is: " + ChangeTime.currentTime);
         System.out.println("Enter 'c' to change time or enter 'd' to display the date instead");
     }

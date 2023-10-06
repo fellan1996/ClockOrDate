@@ -21,11 +21,12 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         String userInput;
         while (true) {
+            System.out.println("");
+            System.out.println("The state is currently: " + currentState);
             switch (currentState) {
                 case DISPLAY_TIME -> {
                     displayTime.display();
                     userInput = scanner.nextLine().trim();
-                    System.out.println(userInput + " userInput");
                     currentState = displayTime.getNextState(userInput);
                 }
                 case CHANGE_TIME -> {
